@@ -9,7 +9,7 @@ const Navbar = async () => {
     <div>
       <nav className="container mx-auto flex justify-between items-center px-6 py-4 bg-gray-200">
         <div>
-          <h1 className="text-4xl font-bold">Blog</h1>
+          <h1 className="text-4xl font-bold">Blog App</h1>
         </div>
         <div className="flex justify-center items-center gap-4">
           <Link href="/" prefetch={true}>
