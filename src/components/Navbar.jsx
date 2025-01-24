@@ -1,4 +1,7 @@
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import {
+  getKindeServerSession,
+  LogoutLink,
+} from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
 
 const Navbar = async () => {
@@ -18,7 +21,7 @@ const Navbar = async () => {
           <Link href="/profile">Profile</Link>
           {user ? (
             <>
-              <Link href="/api/auth/logout">Logout</Link>
+              <LogoutLink href="/api/auth/logout">Logout</LogoutLink>
             </>
           ) : (
             <>
