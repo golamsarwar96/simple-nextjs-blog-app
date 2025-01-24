@@ -1,6 +1,8 @@
 import {
   getKindeServerSession,
+  LoginLink,
   LogoutLink,
+  RegisterLink,
 } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
 
@@ -18,19 +20,21 @@ const Navbar = async () => {
           <Link href="/" prefetch={true}>
             Home
           </Link>
-          <Link href="/profile">Profile</Link>
+          <Link href="/profile" prefetch={true}>
+            Profile
+          </Link>
           {user ? (
             <>
               <LogoutLink href="/api/auth/logout">Logout</LogoutLink>
             </>
           ) : (
             <>
-              <Link href="/api/auth/login" prefetch={true}>
+              <LoginLink href="/api/auth/login" prefetch={true}>
                 Login
-              </Link>
-              <Link href="/api/auth/register" prefetch={true}>
+              </LoginLink>
+              <RegisterLink href="/api/auth/register" prefetch={true}>
                 Register
-              </Link>
+              </RegisterLink>
             </>
           )}
         </div>
