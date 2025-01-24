@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {
@@ -10,8 +9,8 @@ export default async function Home() {
       <h1 className="text-5xl font-bold mt-5 text-center">
         Read Our Latest Blogs
       </h1>
-      <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-        {data.slice(0, 9).map((blog) => (
+      <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
+        {data.slice(0, 12).map((blog) => (
           <Link
             href={`blog/${blog.id}`}
             key="blog?.id"
