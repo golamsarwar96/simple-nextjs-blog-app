@@ -6,7 +6,7 @@ export default async function Home() {
   const data = await res.json();
   console.log(data);
   return (
-    <div>
+    <div className="container mx-auto">
       <h1 className="text-5xl font-bold mt-5 text-center">
         Read Our Latest Blogs
       </h1>

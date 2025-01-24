@@ -15,9 +15,7 @@ const Navbar = async () => {
           <Link href="/" prefetch={true}>
             Home
           </Link>
-          <Link href="/profile" prefetch={true}>
-            Profile
-          </Link>
+          <Link href="/profile">Profile</Link>
           {user ? (
             <>
               <Link href="/api/auth/logout">Logout</Link>
